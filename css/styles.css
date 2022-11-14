@@ -234,8 +234,27 @@ ul {
 .work > .item:nth-child(3n) {
   margin-right: 0;
 }
+.picture-wrap {
+  position: relative;
+}
 .work .picture {
   display: block;
+}
+.work .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--white-color);
 }
 
 /* --------------- COMMAND --------------- */
@@ -497,9 +516,30 @@ ul {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.project .thumb {
+  position: relative;
+  overflow: hidden;
+}
 .project .picture {
   display: block;
 }
+.project .hover-overlay {
+  top: 100%;
+  left: 0;
+  padding: 63px 24px;
+  position: absolute;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project .link:hover .hover-overlay {
+  transform: translateY(-100%);
+}
+
 .project .description {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
