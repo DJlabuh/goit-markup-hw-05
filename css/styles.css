@@ -101,6 +101,10 @@ ul {
 .site-nav.list {
   display: flex;
 }
+.site-nav > .item {
+  display: flex;
+  position: relative;
+}
 .site-nav > .item + .item {
   margin-left: 50px;
 }
@@ -125,6 +129,17 @@ ul {
 .site-nav .link.current {
   color: var(--accent-color);
 }
+.site-nav .link.current::after {
+  display: block;
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: 4px;
+  background-color: var(--accent-color);
+}
+
 .contacts.list {
   display: flex;
 }
