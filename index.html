@@ -52,7 +52,20 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Ефективні рішення для<br />вашого бізнесу</h1>
-        <button type="button" class="button primary hero-btn">Замовити послугу</button>
+        <button type="button" class="button primary hero-btn" data-modal-open>
+          Замовити послугу
+        </button>
+
+        <!-- Модальное окно -->
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <div class="icon-wrap">
+              <svg class="icon" width="18" height="18" data-modal-close>
+                <use href="./images/icons.svg#close"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="section section-features">
         <div class="container">
